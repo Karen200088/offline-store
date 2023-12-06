@@ -1,0 +1,78 @@
+.header {
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .headerMain {
+    padding: 10px 30px;
+  }
+
+  h1 {
+    margin: 0;
+    transition: 0.1s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .burgerMenu {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .navList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+    &.showMenu {
+      max-height: 200px;
+      padding-bottom: 20px;
+    }
+
+    li {
+      margin: 0 10px;
+      line-height: 30px;
+      font-size: 20px;
+      text-transform: capitalize;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  background: black;
+  h1 {
+    color: whitesmoke;
+  }
+  .burgerMenu {
+    color: whitesmoke;
+  }
+  li {
+    a {
+      color: whitesmoke;
+    }
+  }
+}
